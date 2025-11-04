@@ -9,6 +9,7 @@ Detta projekt analyserar och visualiserar magnetfältet från en strömförande 
 -   `experiment_plot.py`: Läser in den städade datan, konverterar mätvärden (mV) till magnetfält (Gauss) och plottar det uppmätta magnetfältet ($B_z$) som en funktion av positionen ($z$) för olika tvärgående positioner ($x$). Resultatet sparas som `experiment_plot.png`.
 -   `integral_plot.py`: Beräknar det teoretiska magnetfältet ($B_z$) genom numerisk integration av Biot-Savarts lag för en spole med samma geometri och ström som i experimentet. Resultatet sparas som `integral_plot.png`.
 -   `comparison_plot.py`: Jämför de experimentella och teoretiska resultaten i en och samma graf. Plottar även skillnaden (delta) mellan mätdata och teori. Resultaten sparas som `comparison_plot.png` och `delta_plot.png`.
+-   `error_approx.py`: Beräknar det numeriska felet i Biot-Savarts lag-integrationen genom att jämföra den med den analytiska lösningen för det axiella magnetfältet.
 
 ## Resultat
 
@@ -26,11 +27,13 @@ För att återskapa resultaten, kör följande skript (uv):
 1.  `uv run experiment_plot.py`
 2.  `uv run integral_plot.py`
 3.  `uv run comparison_plot.py`
+4.  `uv run error_approx.py`
 
 För att återskapa resultaten, kör följande skript (python):
 
 1.  `python experiment_plot.py`
 2.  `python integral_plot.py`
 3.  `python comparison_plot.py`
+4.  `python error_approx.py`
 
 Detta kommer att generera alla `.png`-filer baserat på den inkluderade `cleaned_plot_data.csv`-filen.
